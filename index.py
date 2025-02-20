@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import pandas as pd 
 import time
-URL = "https://www.amazon.in/s?k=lip+gloss&crid=1977L0SGS24VY&sprefix=lip+gloss%2Caps%2C330&ref=nb_sb_noss_2"
+URL = "https://www.flipkart.com/search?q=laptop&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off"
 HEADERS = {
    "User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36",
     "Accept-language": "en-US,en;q=0.9",
@@ -14,21 +14,6 @@ soup = BeautifulSoup(response.content,"html.parser")
 products=[]
 prices=[]
 ratings=[]
-# for item in soup.find_all("div",class_="s-main-slot s-result-list s-search-results sg-row"):
-#     for product in item.find_all("div",class_="s-result-item"):
-#         name = product.find("span",class_="a-size-medium")
-#         if name:
-#             products.append(name.text.strip())
-#     else:products.append("N/A")
-
-# price=product.find("span",class_="a-price-whole")
-# rating=product.find("span",class_="a-icon-alt")
-# if rating:ratings.append(rating.text.strip())
-# else:ratings.append("N/A")
-# time.sleep(2)
-
-# df.to_csv("amazon_product.csv",index=False)
-# print("Scraping completed! Data saved to amazon_products.csv ")
 
 
 # Extract product details
